@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "pnpm -r --parallel dev",
     "start": "pnpm --filter server start",
-    "lint": "pnpm -r lint"
+    "lint": "pnpm -r lint",
+    "build:client": "cd client && pnpm build"
   }
 }

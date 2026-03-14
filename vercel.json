@@ -1,6 +1,6 @@
 {
   "version": 2,
   "installCommand": "pnpm install",
-  "buildCommand": "pnpm --filter client build 2>&1 && mkdir -p dist && cp -r client/dist/* dist/ || (echo 'Build failed - checking client/dist' && ls -la client/ && exit 1)",
+  "buildCommand": "pnpm run build:client && mkdir -p dist && cp -r client/dist/* dist/",
   "outputDirectory": "dist"
 }
