@@ -1,7 +1,7 @@
 {
   "version": 2,
   "installCommand": "pnpm install",
-  "buildCommand": "pnpm approve-builds --all && pnpm --filter client build",
+  "buildCommand": "pnpm --filter client build",
   "builds": [
     {
       "src": "client/package.json",
