@@ -1,6 +1,6 @@
 {
   "version": 2,
   "installCommand": "pnpm install",
-  "buildCommand": "pnpm --filter client build && cp -R client/dist dist",
+  "buildCommand": "pnpm --filter client build",
   "outputDirectory": "dist"
 }
