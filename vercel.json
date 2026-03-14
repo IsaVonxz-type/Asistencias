@@ -1,6 +1,6 @@
 {
   "version": 2,
   "installCommand": "pnpm install",
-  "buildCommand": "pnpm --filter client build",
+  "buildCommand": "pnpm --filter client build && mkdir -p dist && cp -r client/dist/* dist/ 2>/dev/null || (echo 'Build failed or dist not found' && exit 1)",
   "outputDirectory": "dist"
 }
