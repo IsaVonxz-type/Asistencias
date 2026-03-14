@@ -1,0 +1,14 @@
+{
+  "name": "asistencia",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "start": "pnpm --filter server start",
+    "lint": "pnpm -r lint"
+  }
+}

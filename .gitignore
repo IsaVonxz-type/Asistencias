@@ -1,0 +1,24 @@
+# Node
+node_modules/
+**/node_modules/
+.DS_Store
+.env
+.env.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build
+dist/
+.build/
+
+# Vite
+/.vite
+
+# pnpm
+.pnpm/
+
+# IDE
+.vscode/
