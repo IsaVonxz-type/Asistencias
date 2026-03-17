@@ -15,7 +15,7 @@ async function request(path, options = {}) {
 export const attendanceApi = {
   list: (params) => {
     const query = new URLSearchParams(params || {}).toString();
-    return request(`/attendance?${query}`);
+    return request(query ? `/attendance?${query}` : "/attendance");
   },
   create: (payload) => request(`/attendance`, { method: "POST", body: JSON.stringify(payload) }),
   update: (id, payload) => request(`/attendance/${id}`, { method: "PUT", body: JSON.stringify(payload) }),
@@ -25,7 +25,7 @@ export const attendanceApi = {
 export const studentsApi = {
   list: (params) => {
     const query = new URLSearchParams(params || {}).toString();
-    return request(`/students?${query}`);
+    return request(query ? `/students?${query}` : "/students");
   },
   absences: (studentId) => request(`/students/${studentId}/absences`),
 };
