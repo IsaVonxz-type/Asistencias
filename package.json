@@ -11,7 +11,7 @@
     "dev": "pnpm -r --parallel dev",
     "start": "pnpm --filter server start",
     "lint": "pnpm -r lint",
-    "build:client": "pnpm --filter asistencia-client build",
+    "build:client": "pnpm --dir client build",
     "build": "pnpm run build:client"
   }
 }
