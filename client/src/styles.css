@@ -405,6 +405,10 @@ select:focus {
     width: 16rem;
   }
 
+  .form-card > .form-grid > .form-actions {
+    justify-content: center;
+  }
+
   .panel {
     width: var(--responsive-calcule);
   }
