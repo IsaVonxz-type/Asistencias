@@ -229,6 +229,7 @@ select:focus {
 }
 
 .form-card {
+  width: 100%;
   background: white;
   border-radius: 18px;
   padding: 18px 20px;
@@ -250,12 +251,12 @@ select:focus {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
 }
 
 .asis-input {
-  max-width: 10rem;
-  min-width: 7.5rem;
+  width: 10rem;
 }
 
 .form-actions {
@@ -360,7 +361,7 @@ select:focus {
 
 @media (max-width: 960px) {
   .sidebar {
-    width: 100%;
+    width: 180px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -378,6 +379,10 @@ select:focus {
 
   .content {
     padding: 14px;
+  }
+
+  form-card {
+    width: 100%;
   }
 
   .form-grid,
