@@ -313,6 +313,7 @@ select:focus {
   align-items: center;
   justify-content: center;
   margin: auto;
+  top: 10px;
 }
 
 .status.present {
