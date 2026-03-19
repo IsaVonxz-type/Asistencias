@@ -361,7 +361,7 @@ select:focus {
 
 @media (max-width: 960px) {
   .sidebar {
-    width: 180px;
+    width: 200px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -381,7 +381,7 @@ select:focus {
     padding: 14px;
   }
 
-  form-card {
+  .form-card {
     width: 100%;
   }
 
