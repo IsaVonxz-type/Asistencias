@@ -1,5 +1,5 @@
 :root {
-  --responsive-calcule: calc(100% - 32% - 32px);
+  --responsive-calcule: calc(100% - 32% - 16px);
 }
 
 * {
@@ -7,6 +7,7 @@
 }
 
 body {
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -380,7 +381,7 @@ select:focus {
   }
 
   .header {
-    width: var(--responsive-calcule);
+    width: calc(var(--responsive-calcule) + 16px);
   }
 
   .main {
