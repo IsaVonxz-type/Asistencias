@@ -382,7 +382,7 @@ select:focus {
   }
 
   .form-card {
-    width: 100%;
+    width: 30rem;
   }
 
   .form-grid,
