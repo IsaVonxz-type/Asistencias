@@ -362,7 +362,7 @@ select:focus {
 @media (max-width: 960px) {
   .sidebar {
     width: 200px;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 16px;
