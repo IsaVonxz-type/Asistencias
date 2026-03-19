@@ -226,10 +226,6 @@ select:focus {
   font-size: 0.85rem;
 }
 
-.status-label {
-  margin: auto;
-}
-
 .btn.tiny {
   padding: 6px 10px;
   font-size: 0.8rem;
@@ -312,7 +308,9 @@ select:focus {
   padding: 6px 12px;
   border-radius: 999px;
   font-weight: 600;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .status.present {

@@ -357,10 +357,9 @@ export default function Dashboard({ showToast }) {
                     <td>{row.program}</td>
                     <td
                       className={
-                        "status-label " +
-                        (row.status === "Falta"
+                        row.status === "Falta"
                           ? "status absent"
-                          : "status present")
+                          : "status present"
                       }
                     >
                       {row.status}
