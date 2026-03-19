@@ -3,7 +3,9 @@
 }
 
 body {
+  padding: 0;
   margin: 0;
+  width: 100%;
   font-family:
     system-ui,
     -apple-system,
@@ -379,10 +381,6 @@ select:focus {
 
   .content {
     padding: 14px;
-  }
-
-  .form-card {
-    width: 40rem;
   }
 
   .form-grid,
