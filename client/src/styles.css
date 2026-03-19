@@ -384,10 +384,6 @@ select:focus {
     width: calc(var(--responsive-calcule) + 16px);
   }
 
-  .main {
-    margin-top: 72px;
-  }
-
   .content {
     padding: 14px;
   }
