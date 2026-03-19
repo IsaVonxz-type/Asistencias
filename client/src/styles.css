@@ -290,7 +290,7 @@ select:focus {
 .table th,
 .table td {
   padding: 12px 14px;
-  text-align: left;
+  text-align: center;
   border-bottom: 1px solid rgba(148, 163, 184, 0.25);
 }
 
