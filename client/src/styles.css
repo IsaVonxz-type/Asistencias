@@ -1,3 +1,7 @@
+:root {
+  --responsive-calcule: calc(100% - 32% - 32px);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -363,7 +367,7 @@ select:focus {
 
 @media (max-width: 960px) {
   .sidebar {
-    width: 25%;
+    width: 32%;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -376,7 +380,7 @@ select:focus {
   }
 
   .header {
-    width: calc(100% - 25%);
+    width: var(--responsive-calcule);
   }
 
   .main {
@@ -388,12 +392,16 @@ select:focus {
   }
 
   .form-card {
-    width: calc(100% - 25%);
+    width: var(--responsive-calcule);
   }
 
   .form-grid,
   .filters {
     grid-template-columns: 1fr;
+  }
+
+  .panel {
+    width: var(--responsive-calcule);
   }
 
   .table {
