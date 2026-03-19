@@ -369,7 +369,7 @@ select:focus {
   }
 
   .nav {
-    flex-direction: row;
+    flex-direction: column;
     gap: 10px;
   }
 
@@ -382,7 +382,7 @@ select:focus {
   }
 
   .form-card {
-    width: 30rem;
+    width: 40rem;
   }
 
   .form-grid,
