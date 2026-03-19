@@ -355,14 +355,16 @@ export default function Dashboard({ showToast }) {
                     <td>{row.competence}</td>
                     <td>{row.teacher}</td>
                     <td>{row.program}</td>
-                    <td
-                      className={
-                        row.status === "Falta"
-                          ? "status absent"
-                          : "status present"
-                      }
-                    >
-                      {row.status}
+                    <td>
+                      <span
+                        className={
+                          row.status === "Falta"
+                            ? "status absent"
+                            : "status present"
+                        }
+                      >
+                        {row.status}
+                      </span>
                     </td>
                     <td>
                       <button
