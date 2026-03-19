@@ -308,12 +308,9 @@ select:focus {
   padding: 6px 12px;
   border-radius: 999px;
   font-weight: 600;
-  /* display: block;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  top: 10px; */
+  width: 8rem;
+  height: 4rem;
+  margin-inline: auto;
 }
 
 .status.present {
