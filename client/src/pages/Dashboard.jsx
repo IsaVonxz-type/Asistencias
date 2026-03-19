@@ -28,7 +28,9 @@ export default function Dashboard({ showToast }) {
     try {
       const students = await studentsApi.list({});
       const atRisk = new Set(
-        students.filter((s) => s.status === "En riesgo").map((s) => s.id_number)
+        students
+          .filter((s) => s.status === "En riesgo")
+          .map((s) => s.id_number),
       );
       setRiskIds(atRisk);
     } catch (error) {
@@ -76,7 +78,10 @@ export default function Dashboard({ showToast }) {
         teacher: form.teacher,
         status: form.status,
       });
-      showToast({ type: "success", message: "Asistencia registrada correctamente." });
+      showToast({
+        type: "success",
+        message: "Asistencia registrada correctamente.",
+      });
       setForm(defaultForm);
       loadRecords();
     } catch (error) {
@@ -185,7 +190,7 @@ export default function Dashboard({ showToast }) {
               className="asis-input"
               value={form.fullName}
               onChange={(e) => setForm({ ...form, fullName: e.target.value })}
-              placeholder="Opcional"
+              required
             />
           </label>
           <label className="asis-label">
@@ -232,6 +237,7 @@ export default function Dashboard({ showToast }) {
               className="asis-input"
               value={form.status}
               onChange={(e) => setForm({ ...form, status: e.target.value })}
+              required
             >
               <option value="Presente">Presente</option>
               <option value="Falta">Falta</option>
@@ -279,7 +285,8 @@ export default function Dashboard({ showToast }) {
 
         {stats.withAlert > 0 && (
           <div className="alert">
-            ⚠️ {stats.withAlert} estudiante(s) han acumulado 3 días de inasistencia.
+            ⚠️ {stats.withAlert} estudiante(s) han acumulado 3 días de
+            inasistencia.
           </div>
         )}
 
@@ -288,7 +295,9 @@ export default function Dashboard({ showToast }) {
             Buscar por identificación
             <input
               value={filters.searchId}
-              onChange={(e) => setFilters({ ...filters, searchId: e.target.value })}
+              onChange={(e) =>
+                setFilters({ ...filters, searchId: e.target.value })
+              }
               placeholder="Número de identificación"
             />
           </label>
@@ -296,7 +305,9 @@ export default function Dashboard({ showToast }) {
             Filtrar por grupo
             <input
               value={filters.group}
-              onChange={(e) => setFilters({ ...filters, group: e.target.value })}
+              onChange={(e) =>
+                setFilters({ ...filters, group: e.target.value })
+              }
               placeholder="Grupo"
             />
           </label>
@@ -344,14 +355,26 @@ export default function Dashboard({ showToast }) {
                     <td>{row.competence}</td>
                     <td>{row.teacher}</td>
                     <td>{row.program}</td>
-                    <td className={row.status === "Falta" ? "status absent" : "status present"}>
+                    <td
+                      className={
+                        row.status === "Falta"
+                          ? "status absent"
+                          : "status present"
+                      }
+                    >
                       {row.status}
                     </td>
                     <td>
-                      <button className="btn tiny" onClick={() => handleEdit(row)}>
+                      <button
+                        className="btn tiny"
+                        onClick={() => handleEdit(row)}
+                      >
                         Editar
                       </button>
-                      <button className="btn tiny danger" onClick={() => handleDelete(row.id)}>
+                      <button
+                        className="btn tiny danger"
+                        onClick={() => handleDelete(row.id)}
+                      >
                         Eliminar
                       </button>
                     </td>
@@ -360,7 +383,9 @@ export default function Dashboard({ showToast }) {
               })}
             </tbody>
           </table>
-          {records.length === 0 && !loading && <div className="empty">No hay registros.</div>}
+          {records.length === 0 && !loading && (
+            <div className="empty">No hay registros.</div>
+          )}
         </div>
       </section>
     </div>

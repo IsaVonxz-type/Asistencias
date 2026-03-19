@@ -397,6 +397,14 @@ select:focus {
     grid-template-columns: 1fr;
   }
 
+  .asis-label {
+    margin-inline: 8rem;
+  }
+
+  .asis-input {
+    width: 16rem;
+  }
+
   .panel {
     width: var(--responsive-calcule);
   }
