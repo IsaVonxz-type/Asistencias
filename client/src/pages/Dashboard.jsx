@@ -128,17 +128,19 @@ export default function Dashboard({ showToast }) {
       <section className="form-card">
         <h2>Registrar asistencia</h2>
         <form onSubmit={handleSubmit} className="form-grid">
-          <label>
+          <label className="asis-label">
             Grupo
             <input
+              className="asis-input"
               value={form.group}
               onChange={(e) => setForm({ ...form, group: e.target.value })}
               required
             />
           </label>
-          <label>
+          <label className="asis-label">
             Tipo de identificación
             <select
+              className="asis-input"
               value={form.idType}
               onChange={(e) => setForm({ ...form, idType: e.target.value })}
               required
@@ -150,75 +152,84 @@ export default function Dashboard({ showToast }) {
               ))}
             </select>
           </label>
-          <label>
+          <label className="asis-label">
             Número de identificación
             <input
+              className="asis-input"
               value={form.idNumber}
               onChange={(e) => setForm({ ...form, idNumber: e.target.value })}
               required
             />
           </label>
-          <label>
+          <label className="asis-label">
             Nombre del profesor
             <input
+              className="asis-input"
               value={form.teacher}
               onChange={(e) => setForm({ ...form, teacher: e.target.value })}
               required
             />
           </label>
-          <label>
+          <label className="asis-label">
             Programa de formación
             <input
+              className="asis-input"
               value={form.program}
               onChange={(e) => setForm({ ...form, program: e.target.value })}
               required
             />
           </label>
-          <label>
+          <label className="asis-label">
             Nombre completo
             <input
+              className="asis-input"
               value={form.fullName}
               onChange={(e) => setForm({ ...form, fullName: e.target.value })}
               placeholder="Opcional"
             />
           </label>
-          <label>
+          <label className="asis-label">
             Fecha
             <input
+              className="asis-input"
               type="date"
               value={form.date}
               onChange={(e) => setForm({ ...form, date: e.target.value })}
               required
             />
           </label>
-          <label>
+          <label className="asis-label">
             Hora
             <input
+              className="asis-input"
               type="time"
               value={form.time}
               onChange={(e) => setForm({ ...form, time: e.target.value })}
               required
             />
           </label>
-          <label>
+          <label className="asis-label">
             Clase / asignatura
             <input
+              className="asis-input"
               value={form.className}
               onChange={(e) => setForm({ ...form, className: e.target.value })}
               required
             />
           </label>
-          <label>
+          <label className="asis-label">
             Competencia
             <input
+              className="asis-input"
               value={form.competence}
               onChange={(e) => setForm({ ...form, competence: e.target.value })}
               required
             />
           </label>
-          <label>
+          <label className="asis-label">
             Estado
             <select
+              className="asis-input"
               value={form.status}
               onChange={(e) => setForm({ ...form, status: e.target.value })}
             >
