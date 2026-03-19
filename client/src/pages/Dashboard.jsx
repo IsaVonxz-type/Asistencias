@@ -361,7 +361,6 @@ export default function Dashboard({ showToast }) {
                           ? "status absent"
                           : "status present"
                       }
-                      style={{ marginBlock: "auto" }}
                     >
                       {row.status}
                     </td>
