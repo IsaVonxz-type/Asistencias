@@ -229,10 +229,17 @@ select:focus {
 .btn.tiny {
   padding: 6px 10px;
   font-size: 0.8rem;
+  width: 5rem;
 }
 
 .btn.danger {
   background: #dc2626;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .form-card {

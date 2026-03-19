@@ -364,7 +364,7 @@ export default function Dashboard({ showToast }) {
                     >
                       {row.status}
                     </td>
-                    <td>
+                    <td className="actions">
                       <button
                         className="btn tiny"
                         onClick={() => handleEdit(row)}
