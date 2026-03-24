@@ -88,7 +88,7 @@ export default function Dashboard({ showToast }) {
       showToast({ type: "error", message: error.message });
     }
   };
-
+// Elimina un registro de asistencia
   const handleDelete = async (id) => {
     if (!window.confirm("¿Eliminar este registro de asistencia?")) return;
     try {
@@ -99,7 +99,7 @@ export default function Dashboard({ showToast }) {
       showToast({ type: "error", message: error.message });
     }
   };
-
+// Edita el estado de un registro (Presente/Falta)
   const handleEdit = async (record) => {
     const status = window.prompt("Estado (Presente/Falta)", record.status);
     if (!status) return;
